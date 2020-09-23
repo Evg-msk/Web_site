@@ -9,16 +9,16 @@
 </head>
 
 <body>
-<header class="header">
+<header class="header" id="main">
     <div class="container">
         <div class="header__inner">
             <div class="header__logo"> Evgeny Morozov </div>
             <nav class="nav">
-                <a class="nav__link" href="#"> Главная </a>
+                <a class="nav__link" href="#main"> Главная </a>
                 <a class="nav__link" href="#about"> О нас </a>
-                <a class="nav__link" href="#"> Услуги </a>
-                <a class="nav__link" href="#"> Отзывы </a>
-                <a class="nav__link" href="#"> Контакты </a>
+                <a class="nav__link" href="#services"> Услуги </a>
+                <a class="nav__link" href="#comments"> Отзывы </a>
+                <a class="nav__link" href="#contacts"> Контакты </a>
             </nav>
             <button class="btn_registration" type="button"> Регистрация </button>
         </div>
@@ -32,8 +32,10 @@
             мобильное приложение </h1>
         <h3 class="intro__subtitle-2"> Вселенная достаточно огромна, чтобы уравнение времени стабильно. Комета Хейла-Боппа, в первом приближении, пространственно отражает космический дип-скай объект. Газопылевое облако, а там действительно могли быть видны звезды, о чем свидетельствует Фукидид пространственно неоднородно. </h3>
         <form class="form">
-            <label for="email"></label><input class="email__input" placeholder="Ваш E-mail" type="email" id="email"/>
-            <input class="btn__submit" type="submit" value="Скачать">
+            <label>
+                <input class="email__input" placeholder="Ваш E-mail" type="email" name="email" required>
+            </label>
+            <button class="btn__submit" type="submit"> Скачать </button>
         </form>
     </div>
 </div>
@@ -53,8 +55,8 @@
         </div>
     </div>
 </div>
-<div class="materials"></div>
-<div class="feedback">
+<div class="materials" id="services"></div>
+<div class="feedback" id="comments">
     <div class="container">
         <div class="feedback__subtitle">Форма заявки</div>
         <div class="feedback__title">Оставьте отзыв</div>
@@ -88,6 +90,19 @@
             </label>
             <button type="submit" class="user__btn__registration"> Отправить </button>
         </form>
+    </div>
+</div>
+<div class="map">
+        <iframe class="test" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19259.60693125031!2d1.0043100338774882!3d52.88630441263908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d76f830b299c39%3A0xebb2c386955d3c93!2z0JHRgNC40L3RgtC-0L0sINCS0LXQu9C40LrQvtCx0YDQuNGC0LDQvdC40Y8!5e0!3m2!1sru!2sru!4v1597174001058!5m2!1sru!2sru" frameborder="0" width="1518" height="490" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<div class="footer" id="contacts">
+    <div class="footer__inner">
+        <div class="instagramm"></div>
+        <div class="facebook"></div>
+        <div class="twitter"></div>
+        <div class="whatsup"></div>
+        <div class="google"></div>
+        <div class="github"></div>
     </div>
 </div>
 <script src="js/script.js"></script>
