@@ -48,6 +48,9 @@ a {
 .nav__link:hover {
     color: gray;
 }
+.hamburger {
+    display: none;
+}
 .btn_registration {
     width: 195px;
     height: 50px;
@@ -349,14 +352,7 @@ a {
     background: url(../img/icons/github.png) center no-repeat;
 }
 /*Styles for mobile*/
-@media (max-width: 768px) {
-
-}
-
-@media (max-width: 409px) {
-    .container {
-        max-width: 400px;
-    }
+@media (max-width: 767px) {
     .header {
         padding: 10px;
     }
@@ -368,20 +364,45 @@ a {
         display: none;
     }
     .nav {
-        display: inline-block;
-        text-align: center;
-        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        padding: 20px 15px;
+        background-color: rgba(64,48,213, .4);
+        transition: .4s all;
+    }
+    .nav .nav_active {
+        left: 0;
     }
     .nav__link {
         display: block;
-        margin: 0;
+        margin-top: 10px;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 5%;
+        transform: translateY(-5%);
+        width: 26px;
+    }
+    .hamburger span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-bottom: 2px;
+        background-color: #fff;
+
     }
     .btn_registration {
         display: block;
         width: 120px;
         height: 30px;
         margin: 0;
-        vertical-align: top;
         font-size: 14px;
     }
     .intro {
